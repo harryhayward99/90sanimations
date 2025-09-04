@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Dreams - 90s Animation Designer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">NEON DREAMS</h1>
+            <nav class="nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">Welcome to the Future</h2>
+            <p class="hero-subtitle">Interactive 90s Animation Designer</p>
+            <div class="hero-animation">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Interactive Animations</h2>
+            
+            <!-- Animation 1: Bouncing Ball -->
+            <div class="animation-card">
+                <h3>Bouncing Ball Matrix</h3>
+                <div class="animation-container" id="bouncing-ball">
+                    <canvas id="ball-canvas" width="400" height="300"></canvas>
+                    <div class="controls">
+                        <button class="control-btn" onclick="toggleBouncingBall()">Toggle Animation</button>
+                        <input type="range" id="ball-speed" min="1" max="10" value="5" onchange="updateBallSpeed(this.value)">
+                        <label>Speed</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animation 2: Matrix Rain -->
+            <div class="animation-card">
+                <h3>Digital Rain</h3>
+                <div class="animation-container" id="matrix-rain">
+                    <canvas id="matrix-canvas" width="400" height="300"></canvas>
+                    <div class="controls">
+                        <button class="control-btn" onclick="toggleMatrixRain()">Toggle Rain</button>
+                        <input type="range" id="rain-speed" min="1" max="20" value="10" onchange="updateRainSpeed(this.value)">
+                        <label>Intensity</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animation 3: Neon Text -->
+            <div class="animation-card">
+                <h3>Neon Text Glow</h3>
+                <div class="animation-container" id="neon-text">
+                    <div class="neon-text-container">
+                        <h4 class="neon-text" id="neon-display">CYBER DREAMS</h4>
+                    </div>
+                    <div class="controls">
+                        <button class="control-btn" onclick="changeNeonText()">Change Text</button>
+                        <input type="color" id="neon-color" value="#00ffff" onchange="updateNeonColor(this.value)">
+                        <label>Color</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animation 4: Geometric Shapes -->
+            <div class="animation-card">
+                <h3>Geometric Hypnosis</h3>
+                <div class="animation-container" id="geometric-shapes">
+                    <canvas id="geo-canvas" width="400" height="300"></canvas>
+                    <div class="controls">
+                        <button class="control-btn" onclick="toggleGeometric()">Toggle Shapes</button>
+                        <input type="range" id="geo-size" min="20" max="100" value="50" onchange="updateGeoSize(this.value)">
+                        <label>Size</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animation 5: Particle System -->
+            <div class="animation-card">
+                <h3>Particle Explosion</h3>
+                <div class="animation-container" id="particle-system">
+                    <canvas id="particle-canvas" width="400" height="300"></canvas>
+                    <div class="controls">
+                        <button class="control-btn" onclick="explodeParticles()">Explode!</button>
+                        <input type="range" id="particle-count" min="50" max="500" value="200" onchange="updateParticleCount(this.value)">
+                        <label>Particles</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About the Designer</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Welcome to the digital realm of Neon Dreams, where 90s nostalgia meets cutting-edge web animation. I specialize in creating interactive experiences that transport you back to the golden age of cyberpunk aesthetics.</p>
+                    <p>Each animation is crafted with love for the retro-futuristic vibes that defined the 90s, featuring neon colors, geometric patterns, and that unmistakable cyberpunk atmosphere.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Interactive Animations</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">90s Authentic</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Neon Dreams</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Ready to Create Something Amazing?</h3>
+                    <p>Let's bring your 90s cyberpunk vision to life!</p>
+                    <div class="contact-methods">
+                        <a href="mailto:neon@cyberdreams.com" class="contact-link">neon@cyberdreams.com</a>
+                        <a href="tel:+1234567890" class="contact-link">+1 (234) 567-890</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Your Name" class="form-input">
+                        <input type="email" placeholder="Your Email" class="form-input">
+                        <textarea placeholder="Your Message" class="form-textarea"></textarea>
+                        <button type="submit" class="form-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Neon Dreams. All rights reserved. | Made with 💜 and neon lights</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
